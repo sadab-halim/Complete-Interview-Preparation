@@ -8,7 +8,7 @@ In Java, array is an object of a dynamically generated class. Java array inherit
 
 Java provides the feature of anonymous arrays which is not available in C/C++.
 
-![arrayexample](/Practice/Complete-Interview-Preparation/Arrays/img/array1.png)
+![arrayexample](array1.png)
 
 *Advantages*
 - Code Optimization
