@@ -6,13 +6,13 @@ Tress are hierarchical, non-liner data structures.
 - The elements that are directly under an element are called its **children**.
 - The element directly above something is called its **parent**.
 
-![treeex](img/treenotes1.png)
+![treeex](../../Images/treenotes1.png)
 
 ### Why do we use Trees?
 1. Trees are used might be because we want to store information that naturally forms a hierarchy. <br/>
 For ex: the file system of a computer. 
 
-![treeex2](img/treenotes2.png)
+![treeex2](../../Images/treenotes2.png)
 
 2. Trees (with some ordering e.g. BST) provides moderate access/search (quicker than Linked List and slower than arrays).
 
@@ -47,17 +47,17 @@ Since, each element in a binary tree can have only 2 children, we typically name
 1. **Full Binary Tree** <br/>
     A Binary Tree is a full binary tree if every node has 0 or 2 children.
 
-   ![treenotesex](img/treenotes3.png)
+   ![treenotesex](../../Images/treenotes3.png)
 
 2. **Complete Binary Tree** <br/>
     A Binary Tree is a Complete Binary Tree if all the levels are completely filled except possibly in the last level and the last level has all keys as left as possible.
 
-   ![treenotesex](img/treenotes4.png)
+   ![treenotesex](../../Images/treenotes4.png)
 
 3. **Perfect Binary Tree** <br/>
     A Binary Tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level.
 
-   ![treenotesex](img/treenotes5.png)
+   ![treenotesex](../../Images/treenotes5.png)
 
    In a Perfect Binary Tree, the number of leaf nodes is the number of internal nodes plus 1
 
@@ -78,7 +78,7 @@ A tree is typically traversed in two ways:
 - Depth First Traversal (DFS)
 - Breadth First Traversal (BFS)
 
-![treenotex](img/treenotes7.png)
+![treenotex](../../Images/treenotes7.png)
 
 **Depth First Traversals (DFS):** <br/>
 - Preorder (Root, Left, Right) : 1 2 4 5 3
