@@ -10,7 +10,7 @@ class Node {
     }
 }
 
-class Main {
+class Recursive_Approach {
     // ---------------- T.C: O(n), A.S: O(n) ----------------
     // Recursive function to perform preorder traversal
     public static void preorder(Node root) {
