@@ -13,9 +13,11 @@ class Main {
     public static int height (Node root) {
         if (root == null)
             return 0;
+        int leftHeight = maxDepth(root.left);
+        int rightHeight = maxDepth(root.right);
         
         // recursive fn call for the left and right subtree and consider max depth
-        return 1 + Math.max(height(root.left), height(root.right));
+        return 1 + Math.max(leftHeight, rightHeight);
     }
 
     public static void main(String[] args) {
