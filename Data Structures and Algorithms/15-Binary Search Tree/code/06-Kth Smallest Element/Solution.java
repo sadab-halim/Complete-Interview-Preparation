@@ -2,7 +2,6 @@ class Solution {
     public int kthSmallest(TreeNode root, int k) {
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode curr = root;
-
         int count = 0;
         while(true) {
             if(curr != null){
