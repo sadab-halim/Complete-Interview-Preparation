@@ -165,8 +165,96 @@ A program is I/O bound if it would go faster if the I/O subsystem was faster. Wh
 ### Context Switch
 Context Switching involves storing the context or state of a process so that it can be reloaded when required and execution can be resumed from the same point as earlier. This is a feature of a multitasking operating system and allows a single CPU to be shared by multiple processes.
 
+### Inter-Process Communication
+### Inter Process Communication - Pipes
+Pipe is a communication medium between two or more related or interrelated processes. It can be either within one process or a communication between the child and the parent processes. 
 
-### What is a Context Switch?
+Communication can also be multi-level such as communication between the parent, the child and the grand-child, etc. 
+
+Communication is achieved by one process writing into the pipe and other reading from the pipe. To achieve the pipe system call, create two files, one to write into the file and another to read from the file.
+
+### Maximum number of Zombie process a system can handle?
+Zombie Process or Defunct Process are those Process which has completed their execution by exit() system call but still has an entry in Process Table. It is a process in terminated state.
+
+```c:
+//C program to find number of zombie processes
+// a system can handle
+
+#include<stdio.h>
+#include<unistd.h>
+
+int main() {
+    int count = 0;
+    while (fork() > 0) {
+        count++;
+        printf("%d\t", count);
+    }
+}
+```
+
+Output: after 11834, the increment of count stops.
+
+## Thread Concept
+### What is a Thread?
+Thread is an execution unit that consists of its own program counter, a stack, and a set of registers where the program counter mainly keeps track of which instruction to execute next, a set of registers mainly hold its current working variables, and a stack mainly contains the history of execution
+
+Threads are also known as Lightweight processes. Threads are a popular way to improve the performance of an application through parallelism. 
+
+Threads are mainly used to represent a software approach in order to improve the performance of an operating system just by reducing the overhead thread that is mainly equivalent to a classical process.
+
+### Benefits of Multithreading in Operating System
+1. Responsiveness
+2. Resource Sharing
+3. Economy
+4. Scalability
+
+### Examples of Multithreading:
+1. Web Browsers
+2. Web Servers
+3. Computer Games
+4. Text Editors
+5. IDEs
+
+### Types of Threads
+1. **User Threads:** <br/>
+    These are the threads that application programmers use in their programs.
+
+2. **Kernel Threads:** <br/>
+    Kernel threads are supported within the kernel of the OS itself. All modern OSs support kernel-level threads, allowing the kernel to perform multiple simultaneous tasks and/or to service multiple kernel system calls simultaneously.
+
+### Multithreading Models
+1. **Many to One** <br/>
+    - In the many to one model, many user-level threads are all mapped onto a single kernel thread.
+
+    - Thread management is handled by the thread library in user space, which is efficient in nature.
+
+    - In this case, if user-level thread libraries are implemented in the operating system in some way that the system does not support them, then the Kernel threads use this many-to-one relationship model.
+
+2. **One to One** <br/>
+    - The one to one model creates a separate kernel thread to handle each and every user thread.
+
+    - Most implementations of this model place a limit on how many threads can be created.
+
+    - Linux and Windows from 95 to XP implement the one-to-one model for threads.
+
+    - This model provides more concurrency than that of many to one Model.
+
+3. **Many to Many** <br/>
+    - The many to many model multiplexes any number of user threads onto an equal or smaller number of kernel threads, combining the best features of the one-to-one and many-to-one models.
+
+    - Users can create any number of threads.
+
+    - Blocking the kernel system calls does not block the entire process.
+
+    - Processes can be split across multiple processors.
+
+### Which is the best model among the three ?
+
+### Optimal number of threads required for a process?
+
+### Effect of multiple cores on multithreading?
+
+## Process Scheduling
 
 ## Process Synchronization
 
