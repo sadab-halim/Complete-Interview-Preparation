@@ -259,7 +259,35 @@ Threads are mainly used to represent a software approach in order to improve the
 ## Process Synchronization
 
 ## Deadlocks
+**Deadlock** is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. 
 
+![os6](../Images/os6.png)
+
+Consider an example when two trains are coming toward each other on the same track and there is only one track, none of the trains can move once they are in front of each other. A similar situation occurs in operating systems when there are two or more processes that hold some resources and wait for resources held by other(s). For example, in the below diagram, Process 1 is holding Resource 1 and waiting for resource 2 which is acquired by process 2, and process 2 is waiting for resource 1. 
+
+### Deadlock can arise if the following four conditions hold simultaneously (Necessary Conditions) 
+
+- **Mutual Exclusion:** Two or more resources are non-shareable (Only one process can use at a time) 
+- **Hold and Wait:** A process is holding at least one resource and waiting for resources. 
+- **No Preemption:** A resource cannot be taken from a process unless the process releases the resource. 
+- **Circular Wait:** A set of processes are waiting for each other in circular form. 
+
+### Effects of Deadlock
+If the operating system has a deadlock prevention or detection system in place, this will have a negative impact on performance (slow the system down) because whenever a process or thread requests a resource, the system will have to check whether granting this request could cause a potential deadlock situation.
+
+### Methods for Handling Deadlock
+1. **Prevention or Avoidance:** Make sure atleast one condition should not meet
+    - Mutual Exclusion
+    - Hold & Wait
+    - No PreEmption
+    - Circular Wait
+
+2. **Detection or Recovery** <br/>
+    - Banker's Algo
+    - Ostrich Algo
+    - Resource PreEmption
+    
+3. **Ignorance**
 ## Memory Management
 
 ## Virtual Memory Management
