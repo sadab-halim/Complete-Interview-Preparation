@@ -25,7 +25,7 @@ The reason for not changing other elements to 0, but -1, is because that might a
 Now traverse through the matrix again and if an element is -1 change it to 0, which will be the answer.
 
 **Code:** <br/>
-```java:
+```java
 import java.util.*;
 class Main {
     public static void setZeroes(int[][] matrix) {
