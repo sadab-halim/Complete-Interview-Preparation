@@ -92,4 +92,34 @@ begin bubbleSort(array)
 end bubbleSort
 ```
 
-**Code:**
+**Code** <br/>
+```java
+class Main {
+    // function of bubble sort
+    public static void bubbleSort(int arr[]) {
+        int size = arr.length;
+
+        for(int = 0; i < (size - 1); i++) {
+            boolean swapped = false;
+            for(int j = 0; j < (size - i - 1); j++) {
+                if(arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+
+                    swapped = true;
+                }
+            }
+            if(!swapped)
+                break;
+        }
+    }
+}
+```
+
+### Complexity Analysis
+1. Time Complexity
+    - **Worst Case:** O(n^2) <br/>
+        *The worst-case occurs when we want to sort a list in ascending order, but it is arranged in descending order.*
+    - **Average Case:** 
+    - **Best Case:**
