@@ -15,7 +15,7 @@ Consider that we want to sort a list in ascending order, here are the steps that
 3. If the current element is greater than the next element, then swap both the elements. If not, move to the next element.
 4. Repeat steps 1 – 3 until we get the sorted list. 
 
-![SortingExample](/Complete-Interview-Preparation/Images/sorting1.png)
+![SortingExample](../../../Images/sorting1.png)
 
 ## Bubble Sort Algorithm
 
@@ -118,8 +118,14 @@ class Main {
 ```
 
 ### Complexity Analysis
-1. Time Complexity
+1. **Time Complexity**
     - **Worst Case:** O(n^2) <br/>
-        *The worst-case occurs when we want to sort a list in ascending order, but it is arranged in descending order.*
-    - **Average Case:** 
-    - **Best Case:**
+        The worst-case occurs when we want to sort a list in ascending order, but it is arranged in descending order.
+    - **Average Case:** Theta(n^2) <br/>
+        The average case is when the list is arranged in a jumbled order.
+    - **Best Case:** Omega(n) <br/>
+        The best-case occurs when the list is already arranged in the desired order.
+
+2. **Space Complexity**
+    - **Naive Method:** O(1)
+    - **Efficient Method:** O(2)
