@@ -22,6 +22,7 @@ In Directed Graphs, we can only traverse from one node to another if the edge ha
 
 ## Graph Representation
 The most commonly used representations of a graph are as follows:
-1. Adjancency Matrix
+1. Adjacency Matrix
 2. Adjacency List
+
 

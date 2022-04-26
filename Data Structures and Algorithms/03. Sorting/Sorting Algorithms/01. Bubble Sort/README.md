@@ -15,7 +15,7 @@ Consider that we want to sort a list in ascending order, here are the steps that
 3. If the current element is greater than the next element, then swap both the elements. If not, move to the next element.
 4. Repeat steps 1 – 3 until we get the sorted list. 
 
-![SortingExample](../../../Images/sorting1.png)
+![SortingExample](../../../../Images/sorting1.png)
 
 ## Bubble Sort Algorithm
 
