@@ -18,7 +18,7 @@ Let us consider that we want to sort a list in ascending order. Here are the ste
 3. Swap the smallest element in the unsorted sublist with the element that is present at its correct sorted position.
 4. Repeat the above steps until all the elements from the unsorted sublist are transferred to the sorted sublist.
 
-![SortingEx2](../../../Images/sorting2.png)
+![SortingEx2](../../../../Images/sorting2.png)
 
 ## Selection Sort Algorithm
 We know that to sort a list of n elements using Selection Sort, we need to perform n - 1 iterations.
