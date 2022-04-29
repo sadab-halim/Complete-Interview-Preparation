@@ -1,22 +1,6 @@
 # Insertion Sort
 Insertion Sort is one of the simplest sorting techniques which you have used in your daily lives while arranging a deck of cards.
 
-### How Insertion Sort algorithm work?
-
-## Insertion Sort Algorithm
-**Pseudocode** <br/>
-```java
-insertionSort(array)
-    mark First element as sorted
-    for each unsorted element E
-        'extract' the element E
-        for j <- lastSortedIndex down to 0
-            if current element j > E
-                move sorted element to the right by 1
-        break loop and insert E here
-end InsertionSort
-```
-
 **Explanation** <br/>
 `Line 2` We don't process the first element, as it has nothing to compare against <br/>
 `Line 3` Loop from i = 1 till the end, to process each element <br/>
