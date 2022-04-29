@@ -12,7 +12,6 @@ With each iteration of the selection sort, we –
 2. Place it at the end of the sorted sublist.
 
 ### How does Selection Sort work?
-Let us consider that we want to sort a list in ascending order. Here are the steps that the algorithm would follow:
 1. Start with the first element. At this point, the entire list is unsorted. And the sorted sublist is empty.
 2. Iterate over the list to search for the smallest element in it.
 3. Swap the smallest element in the unsorted sublist with the element that is present at its correct sorted position.
@@ -28,21 +27,6 @@ We know that to sort a list of n elements using Selection Sort, we need to perfo
     - Run a nested for loop from j = i + 1 till the size of the list.
         - Check if the element at the index j is smaller than the element at the index mid_index. If it is, set minIndex equal to j. It helps us in searching for the smallest element in the unsorted sublist.
         - Swap the element at the index i with the element at index minIndex. It allows us to place the smallest element from the unsorted sublist at the end of the sorted sublist. Note that we are updating the value of minIndex each time we find an element smaller than it.
-
-**Pseudocode** <br/>
-```java
-begin selectionSort(list)
-    for i = 0 to sizeof(list) - 1
-        minIndex = i;
-        for j = i + 1 to sizeof(list)
-            if list[j] < list[mid_index]
-                minIndex = j
-            end if
-            swap(list[minIndex], list[i])
-        end for
-    end for
-end selectionSort
-```
 
 **Code** <br/>
 ```java
