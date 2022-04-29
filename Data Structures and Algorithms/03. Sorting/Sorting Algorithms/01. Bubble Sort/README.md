@@ -8,8 +8,6 @@ Since, it compares all the elements one by one, bubble sort is a slow algorithm 
 Bubble Sort is also known as *Sinking Sort*.
 
 ### How does Bubble Sort work?
-Consider that we want to sort a list in ascending order, here are the steps that the algorithm would follow:
-
 1. Start with the first element.
 2. Compare the current element with the next element.
 3. If the current element is greater than the next element, then swap both the elements. If not, move to the next element.
@@ -26,19 +24,6 @@ To sort a list of n elements using bubble sort, we need to perform n – 1 itera
 2. Compare the element at the index i with the element at i + 1.
 3. If the element at i is greater than the element at i + 1, swap both the elements
 4. Else, move to the next element.
-
-**Pseudocode** <br/>
-```java
-begin bubbleSort(list)
-    for i = 0 to sizeof(list) - 1
-        for j = 0 to sizeof(lis - (i - 1)
-            if list[j] > list[j+1]
-                swap(list[i], list[i+1])
-            end if
-        end for
-    end for
-end bubbleSort
-```
 
 **Code** <br/>
 ```java
@@ -71,26 +56,6 @@ To tackle this, we can do the following:
 - Else, the value of swapped is set to false.
 - After an iteration, if the value of swapped is found to be false, it means the array is sorted, and no more comparisons are required.
 - We then stop the execution.
-
-**Pseduocode** <br/>
-```java
-begin bubbleSort(array) 
-    size = length of array
-
-    for i = 0 to loop - 1
-        swapped  = false
-        for j = 0 to loop - (i - 1)
-            if list[j] > list[j + 1] then
-                swap(list[j], list[j + 1])
-                swapped = true
-            end if
-        end for
-        if(not swapped) then
-            break
-        end if
-    end for
-end bubbleSort
-```
 
 **Code** <br/>
 ```java
