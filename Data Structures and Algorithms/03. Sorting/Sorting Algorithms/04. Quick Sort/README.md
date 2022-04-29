@@ -25,43 +25,6 @@ In quick sort, every element arranges itself at its correct position to sort the
 ### Working of Quick Sort Algorithm
 ![SortingExample5](../../../Images/sorting5.png)
 
-**Pseudocode** <br/>
-1. Pseudocode for Partioning Subarrays <br/>
-```java
-function partition(array, low, high) 
-    pivot = array[high]
-    left = low
-    right = high - 1
-
-    while(left <= right)
-        while(array[left] < pivot)
-            left = left + 1
-        end while
-
-        while(array[right] > pivot)
-            right = right - 1
-        end while
-
-        if(left < right)
-            swap(array[left], array[right])
-        end if
-    end while
-    swap(array[left], array[high])
-    return left
-end function
-```
-
-2. Pseudo code for Quick Sort Function
-```java
-quicksort(array, low, high) 
-    if low < high
-        pivot = partition(array, low, high)
-        quicksort(array, low, pivot - 1)
-        quicksort(array, pivot + 1, high)
-    end if
-end function
-```
-
 **Code** <br/>
 ```java
 class QuickSort {
@@ -92,9 +55,9 @@ class QuickSort {
 
     public static void quickSort(int array[], int low, int high) {
         if(low < high) {
-            int pivot = partition(array, low, high);
-            quicksort(array, low, pivot - 1);
-            quicksort(array, pivot + 1, high);
+            int pivot_pos = partition(array, low, high);
+            quicksort(array, low, pivot_pos - 1);
+            quicksort(array, pivot_pos + 1, high);
         }
     }
 }

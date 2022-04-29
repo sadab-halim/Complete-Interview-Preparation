@@ -19,76 +19,54 @@ Now that all our subarrays are formed, it is now time to combine them in a sorte
 
 ![SortingEx8](../../../Images/sorting8.png)
 
-**Pseudocode** <br/>
-```java
-PROCEDURE function mergeSort
-    FOR each element present in the original arra indexed by j
-        if (j <= 1) return arr
-        var left = arr[0] to arr[j/2]
-        var right = arr[j/2 + 1] to arr[j]
-        left = mergeSort(left)
-        right = mergeSort(right)
-        return merge(left, right)
-    END FOR
-END PROCEDURE
-
-PROCEDURE function mergeSort
-    WHILE length(left) > 0 and length(right) > 0
-        if first(left) > first(right)
-            append first(left) to ans
-            left = rest(left)
-        else
-            append first(right) to ans
-            right = rest(right)
-    IF length(left) > 0
-        insert left in ans
-    END IF
-
-    IF length(right) > 0
-        insert right in ans
-    END IF
-    return result
-END PROCEDURE 
-```
-
 **Code** <br/>
 ```java
 class MergeSort {m int 
-    public static void merge(int sorted[], int start, int mid, int end) {
+    public static void merge(int arr[], int start, int mid, int end) {
         int m1 = mid - start + 1;
         int m2 = end - mid;
 
-        int arr1[] = new int[m1];
-        int arr1[] = new int[m2];
+        int temp1[] = new int[m1];
+        int temp2[] = new int[m2];
 
         for(int i = 0; i < m1; i++)
-            arr1[i] = sorted[start + i];
+            temp1[i] = arr[start + i];
         for(int j = 0; j < m2; j++)
-            arr2[j] = sorted[mid + 1 + j];
+            temp2[j] = arr[mid + 1 + j];
         
         int i = 0, j = 0, k = start;
 
         while(i < m1 && j < m2) {
-            if(arr1[i] <= arr2[j]) {
-                sorted[k] = arr1[i];
+            if(temp1[i] <= temp2[j]) {
+                arr[k] = temp1[i];
                 i++;
             } else {
-                sorted[k] = arr2[j];
+                arr[k] = temp2[j];
                 j++;
             }
             k++;
         }
 
         while (i < m1) {
-            sorted[k] = arr1[i];
+            arr[k] = temp1[i];
             i++;
             k++;
         }
 
         while (j < m2) {
-            sorted[k] = arr2[j];
+            arr[k] = temp2[j];
             j++;
             k++;
+        }
+    }
+
+    public static void mergeSort(int arr[], int start, int end) {
+        if (start < end) {
+            int mid = (start + end) / 2;
+            mergeSort(arr, start, mid);
+            mergeSort(arr, mid + 1, end);
+            // merge the arr subarrays
+            merge(arr, start, mid, end);
         }
     }
 
