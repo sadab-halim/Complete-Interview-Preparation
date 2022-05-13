@@ -1,5 +1,26 @@
-/* --------------- T.C: O(N), A.S: O(N) --------------- */
+/* ----- ITERATIVE IMPLEMENTATION, T.C: O(N), A.S: O(N) ----- */
+import java.util.*;
 
+class Node {
+    int data;
+    Node left, right;
+    Node(int data) {
+        this.data = data;
+        left = right = null;
+    }
+}
+
+class Main {
+    public static ArrayList<Integer> preOrderTrav(Node root) {
+        ArrayList<Integer> preorder = new ArrayList<Integer>();
+
+        if(root == null)
+            return preorder;
+        
+        Stack<Node> s 
+    }
+}
+/* ----- RECURSIVE IMPLEMENTATION, T.C: O(N), A.S: O(N) ----- */
 import java.util.*;
 
 class Node {
