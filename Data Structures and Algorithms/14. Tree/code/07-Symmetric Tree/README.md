@@ -1,9 +1,0 @@
-## Symmetric Tree
-
-Given a binary tree, write an efficient algorithm to check if it has a symmetric structure or not, i.e., left and right subtree mirror each other.
-
-The tree has a symmetric structure if the left and right subtree mirror each other. Two trees mirror each other if all the following conditions are satisfied:
-
-- Both trees are empty, or both are non-empty.
-- The left subtree is the mirror of the right subtree.
-- The right subtree is the mirror of the left subtree.
