@@ -9,17 +9,51 @@ class Node {
         left = right = null;
     }
 }
-
 class Main {
-    public static ArrayList<Integer> preOrderTrav(Node root) {
-        ArrayList<Integer> preorder = new ArrayList<Integer>();
+    static ArrayList <Integer> preOrderTrav(Node root) {
+        ArrayList<Integer>preOrder = new ArrayList<Integer>();
+        if (root == null)
+            return preOrder;
 
-        if(root == null)
-            return preorder;
-        
-        Stack<Node> s 
+        Stack<Node>s = new Stack<>();
+        s.push(root);
+
+        while (!s.isEmpty()) {
+            Node topNode = s.peek();
+            preOrder.add(topNode.data);
+            s.pop();
+            if (topNode.right != null)
+                s.push(topNode.right);
+            if (topNode.left != null)
+                s.push(topNode.left);
+        }
+        return preOrder;
+    }
+
+    public static void main(String args[]) {
+        Node root = new Node(10);
+        root.left = new Node(20);
+        root.right = new Node(30);
+        root.left.left = new Node(40);
+        root.left.right = new Node(50);
+        root.left.right.left = new Node(80);
+        root.right.left = new Node(60);
+        root.right.right = new Node(70);
+        root.right.right.left = new Node(90);
+        root.right.right.right = new Node(100);
+
+        ArrayList<Integer>preOrder = new ArrayList<>();
+        preOrder = preOrderTrav(root);
+
+        System.out.print("The preOrder Traversal is : ");
+        for (int i = 0; i < preOrder.size(); i++) {
+            System.out.print(preOrder.get(i) + " ");
+        }
+
     }
 }
+
+
 /* ----- RECURSIVE IMPLEMENTATION, T.C: O(N), A.S: O(N) ----- */
 import java.util.*;
 
