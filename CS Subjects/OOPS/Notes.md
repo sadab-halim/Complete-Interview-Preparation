@@ -463,6 +463,10 @@ Destructors with the access modifier as private are known as Private Destructors
 Whenever we want to control the destruction of objects of a class, we make the destructor private. For dynamically created objects, it may happen that you pass a pointer to the object to a function and the function deletes the object. 
 
 If the object is referred after the function call, the reference will become dangling.
+
+### Virtual Destructor
+### Pure Virtual Destructor
+
 ### How are destructors different from a normal member function?
 Destructors have same name as the class preceded by a tilde (~) 
 Destructors don’t take any argument and don’t return anything
@@ -480,9 +484,63 @@ Yes, In fact, it is always a good idea to make destructors virtual in base class
 
 ## What is an Object?
 
+### Class vs Object
+| Class | Object |
+| ----- | ------ |
+| Class is a blueprint or template from which objects are created | Object is an instance of a class |
+| Class is a group of similar objects | Object is a real world entity such as pen, laptop, mobile, bed, keyboard, mouse, chair etc |
+| Class is a logical entity | Object is a physical entity |
+| Class is declared using class keyword e.g.
+class Student{} | Object is created through new keyword mainly e.g.
+Student s1=new Student(); |
+| Class is declared once | Object is created many times as per requirement |
+| Class doesn't allocated memory when it is created | Object allocates memory when it is created |
+| There is only one way to define class in java using class keyword | There are many ways to create object in java such as new keyword, newInstance() method, clone() method, factory method and deserialization |
 
-### Real world analogy of Class and Object?
 ### Important Keywords
+- **static keyword:** is mainly used for memory management. It can be used with variables, methods, blocks and nested classes. It is used to share the same variable or method of a given class. Basically, static is used for a constant variable or a method that is same for every instance of a class
+
+- **Virtual keyword:** is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class.For example, this method can be overridden by any class that inherits it.
+
+- **Abstract keyword:** is used to declare the method or a class as abstract.
+
+  **Abstract Class:** A class which contains the abstract keyword in its declaration is known as an abstract class.
+  - Abstract classes may or may not contain abstract methods, i.e., methods without a body ( public void get(); )
+  - But, if a class has at least one abstract method, then the class must be declared abstract.
+  - If a class is declared abstract, it cannot be instantiated.
+  - To use an abstract class, you have to inherit it from another class, provide implementations for the abstract methods in it.
+  - If we want to inherit an abstract class, you have to provide implementations to all the abstract methods in it.
+
+  **Abstract Methods:** If we want a class to contain a particular method but we want the actual implementation of that method to be determined by child classes, we can declare the method in the parent class as an abstract.
+  - The abstract keyword is used to declare the method as abstract.
+  - We have to place the abstract keyword before the method name in the method declaration.
+  - An abstract method contains a method signature, but no method body.
+  - Instead of curly braces, an abstract method will have a semicolon (;) at the end.
+
+  Example: <br/>
+  ```
+  public abstract class Employee {
+    private String name;
+    private String address;
+    private int number;
+
+    public abstract double computePay();
+    // Remainder of class definition
+  }
+  ```
+- **Final keyword:** is used to restrict the user. The java final keyword can be used in many context. Final can be: variable, method or class
+
+  **Java final variable:** If we make any variable as final, we cannot change the value of final variable(It will be constant).
+
+  **Java final method:** If we make any method as final, we cannot override it.
+
+  **Java final class:** f we make any class as final, we cannot extend it.
+  
+- **Explicit keyword:**
+- **this keyword:**
+- **new keyword:**
+- **const keyword:**
+- **super keyword:**
 ## Features of OOPS
 ### Polymorphism
 ### Inheritance
