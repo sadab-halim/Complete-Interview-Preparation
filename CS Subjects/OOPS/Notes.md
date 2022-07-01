@@ -24,10 +24,101 @@ Collection of objects is called Class. It is a logical entity.
 
 ### Similarities between Structure and Class
 ### Access Modifiers
-- Public
-- Private
-- Protected
-- Friend
+Access Modifiers or Access Specifiers in a class are used to assign the accessibility to the class members, i.e., they set some restrictions on the class members so that they can’t be directly accessed by the outside functions. <br/>
+
+There are 3 types of access modifiers available in C++: 
+- **Public:** All the class members declared under the public specifier will be available to everyone. 
+
+The data members and member functions declared as public can be accessed by other classes and functions too. 
+
+The public members of a class can be accessed from anywhere in the program using the direct member access operator (.) with the object of that class. 
+
+```java:
+#include<bits/stdc++.h>
+using namespace std;
+
+class Circle {
+    public:
+        double radius;
+        double compute_area() {
+            return 3.14*radius*radius;
+        }
+};
+
+int main(){
+    Circle obj;
+    obj.radius = 5.5;
+
+    cout<<"Radius is: "<<obj.radius<<"\n";
+    cout<<"Area is: "<<obj.compute_area();
+    return 0;
+}
+```
+
+- **Private:** The class members declared as private can be accessed only by the member functions inside the class. 
+
+They are not allowed to be accessed directly by any object or function outside the class. Only the member functions or the friend functions are allowed to access the private data members of the class. 
+
+```java:
+#include<bits/stdc++.h>
+using namespace std;
+
+class Circle {
+    private:
+        double radius;
+    public:
+        double compute_area() {
+            // member function can access private
+            // data member radius
+            radius = r;
+            double area = 3.14*radius*radius;
+            cout<<"Radius is: "<<radius<<endl;
+            cout<<"Area is: "<<area;
+        }
+};
+
+int main(){
+    Circle obj;
+    obj.compute_area(1.5);
+    return 0;
+}
+```
+
+- **Protected:** The protected access modifier is similar to the private access modifier in the sense that it can’t be accessed outside of its class unless with the help of a friend class. 
+
+The difference is that the class members declared as Protected can be accessed by any subclass (derived class) of that class as well. 
+
+**NOTE:** This access through inheritance can alter the access modifier of the elements of base class in derived class depending on the mode of Inheritance.
+
+```java:
+#include<bits/stdc++.h>
+using namespace std;
+
+class Parent {
+    protected:
+        int id_protected;
+};
+
+class Child : public Parent {
+    public:
+        void setId(int id) {
+            // child class is able to access the inheritance
+            // protected data members of base class
+            id_protected = id;
+        }
+        void displayId() {
+            cout<<"id_protected is: "<<id_protected<<endl;
+        }
+};
+
+int main(){
+    Child obj1;
+    obj1.setId(81);
+    obj1.displayId();
+    return 0;
+}
+```
+### Data Member
 
 ### Member Function
 - Inside Class Function
