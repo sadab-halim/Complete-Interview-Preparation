@@ -377,11 +377,7 @@ int main(){
 | It creates a separate memory block for the new object | It does not create a separate memory block or new memory space |
 | It is an overloaded constructor | It is a bitwise operator |
 | C++ compiler implicitly provides a copy constructor, if no copy constructor is defined in the class | A bitwise copy gets created, if the Assignment operator is not overloaded |
-| className(const className &obj) {
-    // body 
-  } | 
-  className obj1, obj2;
-  obj2 = obj1; |
+
 ## What is an Object?
 
 
