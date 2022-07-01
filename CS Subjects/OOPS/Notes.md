@@ -212,13 +212,6 @@ int main(){
     return 0;
 }
 ```
-### How constructor is different from a normal function?
-- Constructor has same name as the class itself
-- Default Constructors don’t have input argument however, Copy and Parameterized Constructors have input arguments
-- Constructors don’t have return type
-- A constructor is automatically called when an object is created.
-- It must be placed in public section of class.
-- If we do not specify a constructor, C++ compiler generates a default constructor for object (expects no parameters and has an empty body).
 
 ### Characteristics of the constructor:
 - The name of the constructor is the same as its class name.
@@ -377,6 +370,113 @@ int main(){
 | It creates a separate memory block for the new object | It does not create a separate memory block or new memory space |
 | It is an overloaded constructor | It is a bitwise operator |
 | C++ compiler implicitly provides a copy constructor, if no copy constructor is defined in the class | A bitwise copy gets created, if the Assignment operator is not overloaded |
+
+## Virtual Constructor in C++
+
+### How constructor is different from a normal function?
+- Constructor has same name as the class itself
+- Default Constructors don’t have input argument however, Copy and Parameterized Constructors have input arguments
+- Constructors don’t have return type
+- A constructor is automatically called when an object is created.
+- It must be placed in public section of class.
+- If we do not specify a constructor, C++ compiler generates a default constructor for object (expects no parameters and has an empty body).
+
+## Constructor Overloading
+We can have more than one constructor in a class with same name, as long as each has a different list of arguments.This concept is known as Constructor Overloading.
+
+- Overloaded constructors essentially have the same name (exact name of the class) and differ by number and type of arguments.
+- A constructor is called depending upon the number and type of arguments passed.
+- While creating the object, arguments must be passed to let compiler know, which constructor needs to be called. 
+
+```java:
+#include<bits/stdc++.h>
+using namespace std;
+
+class Construct{ 
+    public:
+        float area;
+        // Constructor with no parameters
+        Construct(){
+            area = 0;
+        }
+        
+        // Constructor with two parameters
+        Construct(int a, int b){
+            area = a * b;
+        }
+        
+        void disp(){
+            cout<< area<< endl;
+        }
+};
+ 
+int main(){
+    // Constructor Overloading
+    // with two different constructors
+    // of class name
+    construct o;
+    construct o2( 10, 20);
+     
+    o.disp();
+    o2.disp();
+    return 1;
+}
+```
+
+### Destructors 
+Destructor is an instance member function which is invoked automatically whenever an object is going to be destroyed.
+
+- Destructor is also a special member function like constructor. Destructor destroys the class objects created by constructor.
+- Destructor has the same name as their class name preceded by a tiled (~) symbol.
+- It is not possible to define more than one destructor. 
+- The destructor is only one way to destroy the object create by constructor. Hence destructor can-not be overloaded.
+- Destructor neither requires any argument nor returns any value.
+- It is automatically called when object goes out of scope. 
+- Destructor release memory space occupied by the objects created by constructor.
+- In destructor, objects are destroyed in the reverse of an object creation.
+
+Syntax for defining the destructor within the class: <br/>
+`~ <class-name>(){}`
+
+Syntax for defining the destructor outside the class: <br/>
+`<class-name>: : ~ <class-name>(){}`
+
+### Properties of Destructor
+- Destructor function is automatically invoked when the objects are destroyed.
+- It cannot be declared static or const.
+- The destructor does not have arguments.
+- It has no return type not even void.
+- An object of a class with a Destructor cannot become a member of the union.
+- A destructor should be declared in the public section of the class.
+
+### When is Destructor called?
+A destructor function is called automatically when the object goes out of scope: 
+- the function ends
+- the program ends
+- a block containing local variable ends
+- a delete operator is called
+
+### Private Destructors
+Destructors with the access modifier as private are known as Private Destructors. Whenever we want to prevent the destruction of an object, we can make the destructor private.
+
+### What is the use of Private Destructor?
+Whenever we want to control the destruction of objects of a class, we make the destructor private. For dynamically created objects, it may happen that you pass a pointer to the object to a function and the function deletes the object. 
+
+If the object is referred after the function call, the reference will become dangling.
+### How are destructors different from a normal member function?
+Destructors have same name as the class preceded by a tilde (~) 
+Destructors don’t take any argument and don’t return anything
+
+### Can there be more than one destructor in a class? 
+No, there can only one destructor in a class with classname preceded by ~, no parameters and no return type.
+
+### Why do we need to write a user-defined destructor?
+If we do not write our own destructor in class, compiler creates a default destructor for us. The default destructor works fine unless we have dynamically allocated memory or pointer in class. 
+
+When a class contains a pointer to memory allocated in class, we should write a destructor to release memory before the class instance is destroyed. This must be done to avoid memory leak.
+
+### Can a destructor be virtual?
+Yes, In fact, it is always a good idea to make destructors virtual in base class when we have a virtual function
 
 ## What is an Object?
 
