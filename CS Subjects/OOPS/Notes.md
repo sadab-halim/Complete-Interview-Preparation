@@ -465,6 +465,7 @@ Whenever we want to control the destruction of objects of a class, we make the d
 If the object is referred after the function call, the reference will become dangling.
 
 ### Virtual Destructor
+
 ### Pure Virtual Destructor
 Pure virtual destructors are legal in standard C++ and one of the most important things to remember is that if a class contains a pure virtual destructor, it must provide a function body for the pure virtual destructor. 
 
@@ -664,11 +665,67 @@ Whenever a virtual function is called using a base class reference or pointer it
 
 - The main objective of the base class is to provide the traits to the derived classes and to create the base pointer used for achieving the runtime polymorphism.
 
-### Pure Virtual Desctructor
-
 ## Inheritance
+
 ## Encapsulation
+Encapsulation is a process of wrapping code and data together into a single unit, for example, a capsule which is mixed of several medicines.
+
+a real life example of encapsulation, in a company there are different sections like the accounts section, finance section, sales section etc. The finance section handles all the financial transactions and keep records of all the data related to finance. 
+
+Similarly the sales section handles all the sales related activities and keep records of all the sales. Now there may arise a situation when for some reason an official from finance section needs all the data about sales in a particular month. In this case, he is not allowed to directly access the data of sales section. 
+
+He will first have to contact some other officer in the sales section and then request him to give the particular data. This is what encapsulation is. Here the data of sales section and the employees that can manipulate them are wrapped under a single name “sales section”. 
+
+We can not access any function from class directly. We need an object to access that function which is using the member the variable of that class.
+
+The function which we are making inside the class ,it must use the all member variable then only it is called encapsulation.
+
+If we  don’t  make function inside the class which is using the member  variable of the class then we don’t call it encapsulation.  
+
+Encapsulation also lead to data abstraction or hiding. As using encapsulation also hides the data.
+
+Role of Access Specifiers in Encapsulation:
+1. The data members should be labeled as private using the private access specifiers
+2. The member function which manipulates the data members should be labeled as public using the public access specifier
+
+Advantages:
+- It provides you the control over the data.
+- It is a way to achieve data hiding
+- The encapsulate class is easy to test. So, it is better for unit testing.
+
+### How Do We Achieve Encapsulation?
+The encapsulation can be achieved by the use of 3 keywords in java:
+
+- **private:** The variables or methods that have been declared as private will not be accessible outside the class in which they have been declared. But, an outer class cannot be made private.
+
+- **protected:** The variable or methods that have been declared as private will be accessible inside the class in which they have been defined and in the classes which extends this class. Also, an outer cannot be made protected.
+
+- **public:** The variable or methods that have been declared as public will be accessible anywhere. Also, a class can be made public.
 ## Abstraction
+An abstraction is a way of hiding the implementation details and showing only the functionality to the users. In other words, it ignores the irrelevant details and shows only the required one.
+
+**NOTE:** We cannot create an instance of Abstract Class, It reduces the duplication of code.
+
+### Abstraction vs Encapsulation
+| Abstraction | Encapsulation |
+| ----------- | ------------- |
+| Abstraction is the process or method of gaining the information. | Encapsulation is the process or method to contain the information. |
+| In abstraction, problems are solved at the design or interface level. | in Encapsulation, problems are solved at the implementation level. |
+| Abstraction is the method of hiding the unwanted information. | Encapsulation is a method to hide the data in a single entity or unit along with a method to protect information from outside. |
+| We can implement abstraction using abstract class and interfaces. | Encapsulation can be implemented using by access modifier i.e. private, protected and public. |
+| The objects that help to perform abstraction are encapsulated. | The objects that result in encapsulation need not be abstracted. |
+| Abstraction provides access to specific part of data. | Encapsulation hides data and the user can not access same directly (data hiding. |
+| Abstraction focus is on “what” should be done. | Encapsulation focus is on “How” it should be done. |
+
+
+### How To Achieve Abstraction?
+- In C++
+    - Access Specifiers
+    - Header Files
+
+- In Java
+    - Interfaces
+    - Abstract Classes
 
 ### Dynamic Binding
 ### Message Binding
