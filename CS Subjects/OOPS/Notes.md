@@ -466,6 +466,12 @@ If the object is referred after the function call, the reference will become dan
 
 ### Virtual Destructor
 ### Pure Virtual Destructor
+Pure virtual destructors are legal in standard C++ and one of the most important things to remember is that if a class contains a pure virtual destructor, it must provide a function body for the pure virtual destructor. 
+
+It requires a function body because destructors (unlike other functions) are not actually ‘overridden’, rather they are always called in the reverse order of the class derivation. This means that a derived class destructor will be invoked first, then the base class destructor will be called. 
+
+If the definition of the pure virtual destructor is not provided, then what function body will be called during object destruction? Therefore the compiler and linker enforce the existence of a function body for pure virtual destructors. 
+
 
 ### How are destructors different from a normal member function?
 Destructors have same name as the class preceded by a tilde (~) 
@@ -534,7 +540,7 @@ Student s1=new Student(); |
 
   **Java final method:** If we make any method as final, we cannot override it.
 
-  **Java final class:** f we make any class as final, we cannot extend it.
+  **Java final class:** If we make any class as final, we cannot extend it.
   
 - **Explicit keyword:**
 - **this keyword:**
@@ -542,10 +548,127 @@ Student s1=new Student(); |
 - **const keyword:**
 - **super keyword:**
 ## Features of OOPS
-### Polymorphism
-### Inheritance
-### Encapsulation
-### Abstraction
+- Polymorphism
+- Inheritance
+- Encapsulation
+- Abstraction
+## Polymorphism
+The word “polymorphism” means having many forms.
+Polymorphism can be defined as the ability of a message to be displayed in more than one form. 
+
+A real-life example of polymorphism is a person who at the same time can have different characteristics. Like a man at the same time is a father, a husband and an employee. So the same person exhibits different behavior in different situations. This is called polymorphism.
+
+Polymorphism is mainly divided into two types:
+- Compilt-time Polymorphism
+- Runtime Polymorphism
+
+(Pic) --> https://www.geeksforgeeks.org/polymorphism-in-c/
+
+### Compile-Time Polymorphism
+This type of polymorphism is achieved by function overloading or operator overloading.
+
+**Function Overloading:** When there are multiple functions with the same name but different parameters, then the functions are said to be overloaded. 
+
+Functions can be overloaded by changing the number of arguments or/and changing the type of arguments
+
+This is also known as *Method Overloading* in Java.
+
+Advantages:
+- Increases the readability of the program.
+
+### Why Method Overloading is not possible by changing the return type of method?
+In java, method overloading is not possible by changing the return type of the method because there may occur ambiguity.
+
+### What Functions cannot be overloaded in C++?
+1. Function declarations that differ only in the return type.
+2. Member function declarations with the same name and the name parameter-type-list cannot be overloaded if any of them is a static member function declaration.
+
+**Operator Overloading:** we can make use of the addition operator (+) for string class to concatenate two strings. We know that the task of this operator is to add two operands. 
+
+So a single operator ‘+’, when placed between integer operands, adds them and when placed between string operands, concatenates them.
+
+### Which Operators cannot be overloaded in C++?
+Some of the operators cannot be overloaded. These operators are as follows:
+- “.” Member access or dot operator
+- “? : ” Ternary or conditional operator
+- “::” Scope resolution operator
+- “.*” Pointer to member operator
+- “sizeof” The object size operator
+- “typeid” Object type operator
+
+
+### Runtime Poylmorphism
+This type of polymorphism is achieved by Function Overriding.
+
+It is also known as *Dynamic Method Dispatch* in Java.
+
+**Function Overriding** occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be overridden. 
+
+### Why Do We Need Polymorphism?
+Polymorphism allows us to reuse code by creating one function that's usable for multiple uses. We can also make operators polymorphic and use them to add not only numbers but also combine strings. This saves time and allows for a more streamlined program.
+
+### Virtual Function
+- A virtual function is a member function in the base class that you redefine in a derived class. It is declared using the virtual keyword.
+
+- It is used to tell the compiler to perform dynamic linkage or late binding on the function.
+
+- There is a necessity to use the single pointer to refer to all the objects of the different classes. So, we create the pointer to the base class that refers to all the derived objects. But, when base class pointer contains the address of the derived class object, always executes the base class function. This issue can only be resolved by using the 'virtual' function.
+
+- When the function is made virtual, C++ determines which function is to be invoked at the runtime based on the type of the object pointed by the base class pointer.
+
+Rules of Virtual Function:
+- Virtual functions must be members of some class.
+- Virtual functions cannot be static members.
+- They are accessed through object pointers.
+- They can be a friend of another class.
+- A virtual function must be defined in the base class, even though it is not used.
+
+- The prototypes of a virtual function of the base class and all the derived classes must be identical. If the two functions with the same name but different prototypes, C++ will consider them as the overloaded functions.
+
+- We cannot have a virtual constructor, but we can have a virtual destructor
+
+### Virtual Class
+Virtual classes are used in virtual inheritance in a way of preventing multiple “instances” of a given class appearing in an inheritance hierarchy when using multiple inheritances.
+
+```
+Syntax 1:
+class B : virtual public A 
+{
+};
+
+Syntax 2:
+class C : public virtual A
+{
+};
+```
+
+### Derived Class
+A derived class is a class created or derived from another existing class. The existing class from which the derived class is created through the process of inheritance is known as a base class or superclass.
+
+The hierarchical relationship between derived class and base class is known as an “is a” relationship.
+
+### Can Virtual Functions be set "Private" in C++?
+A virtual function can be private as C++ has access control, but not visibility control.
+
+### Can Virtual Functions be Inclined?
+Whenever a virtual function is called using a base class reference or pointer it cannot be inlined because the call is resolved at runtime, but whenever called using the object (without reference or pointer) of that class, can be inlined because the compiler knows the exact class of the object at compile time.
+
+### Pure Virtual Function
+- A virtual function is not used for performing any task. It only serves as a placeholder.
+
+- When the function has no definition, such function is known as "do-nothing" function.
+
+- The "do-nothing" function is known as a pure virtual function. A pure virtual function is a function declared in the base class that has no definition relative to the base class.
+
+- A class containing the pure virtual function cannot be used to declare the objects of its own, such classes are known as abstract base classes.
+
+- The main objective of the base class is to provide the traits to the derived classes and to create the base pointer used for achieving the runtime polymorphism.
+
+### Pure Virtual Desctructor
+
+## Inheritance
+## Encapsulation
+## Abstraction
 
 ### Dynamic Binding
 ### Message Binding
