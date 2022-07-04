@@ -717,7 +717,12 @@ An abstraction is a way of hiding the implementation details and showing only th
 | Abstraction provides access to specific part of data. | Encapsulation hides data and the user can not access same directly (data hiding. |
 | Abstraction focus is on “what” should be done. | Encapsulation focus is on “How” it should be done. |
 
-
+| Abstract Class | Interface |
+| -------------- | --------- |
+| Abstract class can have abstract and non-abstract methods. | Interface can have only abstract methods. |
+| Abstract class doesn't support multiple inheritance. | Interface supports multiple inheritance. |
+| Abstract class can provide the implementation of interface. | Interface can't provide the implementation of abstract class. |
+| The abstract keyword is used to declare abstract class. | The interface keyword is used to declare interface. |
 ### How To Achieve Abstraction?
 - In C++
     - Access Specifiers
