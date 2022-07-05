@@ -1,0 +1,36 @@
+## Question on Tree
+- Tree Representation
+Preorder Traversal
+Inorder Traversal
+Postorder Traversal
+Level Order Traversal
+Iterative Preorder Traversal
+Iterative Inorder Traversal
+Iterative Postorder Traversal using 2 Stack
+Iterative Postorder Traversal using 1 Stack
+Preorder Inorder Postorder Traversals in One Traversal
+Maximum Deptg in Binary Tree
+Check for Balanced Binary Tree
+Diameter of Binary Tree
+Maximum Path Sum in Binary Tree
+Check if Two Trees are Identical or Not
+Zig-Zag or Spiral Traversal in Binary Tree
+Boundary Traversal in Binary Tree
+Vertical Order Traversal of Binary Tree
+Top View of Binary Tree
+Bottom View of Binary Tree
+Right/Left View of Binary Tree
+Check for Symmetrical Binary Trees
+Print Root to Node Path in Binary Tree
+LCA in Binary Tree
+Maximum Width of Binary Tree
+Children Sum Property in Binary Tree
+Print All Nodes at a K Distance in Binary Tree
+Minimum Time Taken to BURN the Binary Tree
+Count Total Nodes in a Complete Binary Tree
+Requirements Needed to Construct a Unique Binary Tree
+Construct a Binary Tree from Preorder and Inorder Traversal
+Construct a Binary Tree from Postorder and Inorder Traversal
+Serialize and De-serialize Binary Tree
+Morris Traversal
+Flatten a Binary Tree to Linked List

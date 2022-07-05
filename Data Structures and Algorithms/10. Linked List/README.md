@@ -1,6 +1,52 @@
-
-| Questions | Solution |
-| --------- | -------- |
-| SLL Implementation | Click Here |
-| Traversing a LL | Click Here |
-| Insert at Begin of SLL | Click Here |
+- SLL Implementation
+- Traversing a LL
+- Insert at Begin of SLL
+- Insert at End of SLL
+- Insert at Given Pos of SLL
+- Delete First Node of SLL
+- Delete Last of SLL
+- Search in a SLL
+- DLL Implementation
+- Insert at Begin of DLL
+- Insert at End of DLL
+- Delete Last of DLL
+- Delete Head of DLL
+- Reverse a SLL
+- Reverse a DLL
+- CLL Implementation
+- CLL Traversal
+- Insert at Begin of CLL
+- Insert at End of CLL
+- Delete Head of CLL
+- Delete Kth of CLL
+- CDLL
+- Sorted Insert in a SLL
+- Middle of LL
+- Remove Nth Node from End of LL
+- Remove Duplicates from a Sorted SLL
+- Detect Loop
+- Detect Loop using Flloyd Cycle Detection
+- Detect a Remove a Loop
+- Delete Node with Only Pointer Given To It
+- Segregate Even Odd Nodes of LL
+- Intersection of Two LL
+- Pairwise Swap Nodes of LL
+- Add Two Numbers Represented by Linked List
+- Clone a LL using Random Pointer
+- LRU Cache Design
+- Merge Sort for LL
+- Quick Sort on DLL
+- Merge Two Sorted LL
+- Palindrome LL
+- Reverse Nodes in K-Group
+- Find the Starting Point of the Cycle
+- Flattening of a LL
+- Clone a LL
+- LFU Cache
+- Remove Duplicates in a Unsorted LL
+- Find Intersection Point of Y LL
+- Rotate a LL
+- Rotate a LL by K Places
+- Reorder List
+- 3 Sum
+- Max Consecutive Ones
