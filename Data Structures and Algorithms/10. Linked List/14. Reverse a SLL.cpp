@@ -1,6 +1,6 @@
 ListNode* reverse_list(ListNode* head){
     ListNode *new_head = NULL;
-    while(head != null){
+    while(head != NULL){
         ListNode *next = head -> next;
         head->next = new_head;
         new_head = head;
