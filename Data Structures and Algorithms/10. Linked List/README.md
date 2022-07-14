@@ -48,5 +48,3 @@
 - Rotate a LL
 - Rotate a LL by K Places
 - Reorder List
-- 3 Sum
-- Max Consecutive Ones

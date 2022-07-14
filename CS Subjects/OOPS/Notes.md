@@ -121,8 +121,8 @@ int main(){
 ### Data Member
 
 ### Member Function
-- Inside Class Function
-- Outside Class Function
+- Inside Class Function --> Inline Keyword
+- Outside Class Function --> Scope Resolution Operator (::)
 
 ### What is Constructor?
 Constructor is a special method that is invoked automatically at the time of object creation. It is used to initialize the data members of new objects generally. 
