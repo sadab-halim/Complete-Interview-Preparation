@@ -1,3 +1,6 @@
+#include<iostream>
+using namespace std;
+
 struct Node{ 
   int key; 
   struct Node *left; 
@@ -13,4 +16,5 @@ int main(){
 	root->left=new Node(20);
 	root->right=new Node(30);
 	root->left->left=new Node(40);
+  return 0;
 }

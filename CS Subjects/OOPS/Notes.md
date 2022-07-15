@@ -732,8 +732,15 @@ An abstraction is a way of hiding the implementation details and showing only th
     - Interfaces
     - Abstract Classes
 
+Connecting a method call to the method body is known as **binding**.
+There are two types of binding:
+- Dynamic Binding
+- Message Binding
+
 ### Dynamic Binding
+When type of the object is determined at the runtime, it is known as dynamic binding.
 ### Message Binding
+When type of the object is determined at the compiled time, it is known as dynamic binding.
 
 ## Object Oriented Design Interview Questions
 ### Design a HashMap
@@ -744,12 +751,74 @@ An abstraction is a way of hiding the implementation details and showing only th
 
 ## Miscellaneous
 ### C vs C++ vs Java
+| Metrics | C | C++ | Java |
+| ------- | - | --- | ---- |
+| Programming Paradigm | Procedural Language | Object Oriented Programming (OOP) | Pure Object Oriented |
+| Origin | Based on assembly language | Based on C language | Based on C and C++ |
+| Developer | Dennis Ritchie in 1972 | Bjarne Stoustup in 1979 | James Gosling in 1991 |
+| Translator | Compiler only | Compiler only | Interpreted language (Compiler + Interpreter) |
+| Platform Dependency | Platform Dependent | Platform Dependent | Platform Dependent |
+| Code execution | Direct | Direct | Executed by JVM |
+| Approach | Top-down approach | Bottom-up approach | Bottom-up approach |
+| File generation | .exe files | .exe files | .class files |
+| Pre-processor directives | Support header files (#include, #define) | Support (#header, #define) | Use Packages (import) |
+| Keywords | Supports 32 keywords | Supports 63 keywords | 50 defined keywords |
+| Datatypes (union, structure) | Supported | Supported | Not supported |
+| Inheritance | No inheritance | Supported | Supported except Multiple Inheritance |
+| Overloading | No overloading | Support function overloading (Polymorphism) | Operator overloading is not supported |
+| Pointers | Supported | Supported | Not supported |
+| Allocation | Use malloc, calloc | Use new, delete | Garbage collector |
+| Exception Handling | Not supported | Supported | Supported |
+| Templates | Not supported | Supported | Not supported |
+| Destructors | No constructor neither destructor | Supported | Not supported |
+| Multithreading/Interfaces | Not supported | Not supported | Supported |
+| Database connectivity | Not supported | Not supported | Supported |
+| Storage Classes | Supported (auto, extern) | Supported (auto, extern) | Not supported |
+
 ### Difference between Procedural Programming and OOPS
+| Procedural Oriented Programming | Object-Oriented Programming |
+| ------------------------ | ------------------------ |
+| In procedural programming, the program is divided into small parts called functions. | In object-oriented programming, the program is divided into small parts called objects. |
+| Procedural programming follows a top-down approach. | Object-oriented programming follows a bottom-up approach. |
+| There is no access specifier in procedural programming. | Object-oriented programming has access specifiers like private, public, protected, etc. |
+| Procedural programming does not have any proper way of hiding data so it is less secure. | Object-oriented programming provides data hiding so it is more secure. |
+| In procedural programming, there is no concept of data hiding and inheritance. | In object-oriented programming, the concept of data hiding and inheritance is used. |
+| Procedural programming is based on the unreal world. | Object-oriented programming is based on the real world. |
+|  Examples: C, FORTRAN, Pascal, Basic, etc. | Examples: C++, Java, Python, C#, etc.
+ |
+
 ### Why Java is not a purely Object Oriented Language?
+Pure Object Oriented Language or Complete Object Oriented Language are Fully Object Oriented Language which supports or have features which treats everything inside program as objects. 
+
+It doesn’t support primitive datatype(like int, char, float, bool, etc.). 
+
+There are seven qualities to be satisfied for a programming language to be pure Object Oriented. 
+They are:
+1. Encapsulation/Data Hiding
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+5. All predefined types are objects
+6. All user defined types are objects
+7. All operations performed on objects must be only through methods exposed at the objects
+
+Java supports property 1, 2, 3, 4 and 6 but fails to support property 5 and 7 given above. 
+
+Java language is not a Pure Object Oriented Language as it contain these properties:
+- Primitive Data Types ex,  int, long, bool, float, char, etc as Objects
+- static keyword
+- wrapper classes
+
 ### Is an array a primitive type or an object in Java?
+An array in Java is an object. In Java, we can create arrays by using new operator and we know that every object is created using new operator. Hence we can say that array is also an object.
+
+
 ### What is early and late binding?
+Early (or static) binding refers to compile time binding and Late (or dynamic) binding refers to runtime binding (for example when you use reflection).
+
 ### What is the default access modifier in a class?
 ### How many instances can be created for an abstract class?
+
 ### Define Garbage Collection. How does it work?
 ### Define Manipulators
 ### What do you mean by finally block?
