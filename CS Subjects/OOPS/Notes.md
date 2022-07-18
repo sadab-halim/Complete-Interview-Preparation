@@ -560,7 +560,7 @@ Polymorphism can be defined as the ability of a message to be displayed in more 
 A real-life example of polymorphism is a person who at the same time can have different characteristics. Like a man at the same time is a father, a husband and an employee. So the same person exhibits different behavior in different situations. This is called polymorphism.
 
 Polymorphism is mainly divided into two types:
-- Compilt-time Polymorphism
+- Compile-time Polymorphism
 - Runtime Polymorphism
 
 (Pic) --> https://www.geeksforgeeks.org/polymorphism-in-c/
@@ -666,11 +666,135 @@ Whenever a virtual function is called using a base class reference or pointer it
 - The main objective of the base class is to provide the traits to the derived classes and to create the base pointer used for achieving the runtime polymorphism.
 
 ## Inheritance
+The capability of a class to derive properties and characteristics from another class is called Inheritance.
+
+Inheritance is a feature or a process in which, new classes are created from the existing classes. The new class created is called “derived class” or “child class” and the existing class is known as the “base class” or “parent class”. The derived class now is said to be inherited from the base class.
+
+When we say derived class inherits the base class, it means, the derived class inherits all the properties of the base class, without changing the properties of base class and may add new features to its own. These new features in the derived class will not affect the base class. 
+
+The derived class is the specialized class for the base class:
+- **Sub Class:** The class that inherits properties from another class is called Subclass or Derived Class. 
+- **Super Class:** The class whose properties are inherited by a subclass is called Base Class or Superclass. 
+
+### Why and when should we use Inheritance?
+When duplication occurs in the code, it increases the chances of error and data redundancy. To avoid this type of situation, inheritance is used.
+
+Using inheritance, we have to write the functions only one time instead of three times as we have inherited the rest of the the classes from the base class
+
+
+
+### Modes of Inheritance
+There are 3 modes of inheritance:
+
+- **Public Mode:** If we derive a subclass from a public base class. Then the public member of the base class will become public in the derived class and protected members of the base class will become protected in the derived class.
+
+- **Protected Mode:** If we derive a subclass from a Protected base class. Then both public members and protected members of the base class will become protected in the derived class.
+
+- **Private Mode:** If we derive a subclass from a Private base class. Then both public members and protected members of the base class will become Private in the derived class.
+
+| Base Class Member Access Specifier | Public | Protected | Private |
+| ---------------------------------- | ------ | --------- | ------- |
+| Public | Public | Protected | Private |
+| Protected | Protected | Protected | Private |
+| Private | Not Accessible (Hidden) | Not Accessible (Hidden) | Not Accessible (Hidden) |
+
+### Types of Inheritance
+- Single Inheritance
+- Multilevel Inheritance
+- Multiple Inheritance
+- Hierarchical Inheritance
+- Hybrid Inheritance
+
+### Single Inheritance
+In single inheritance, a class is allowed to inherit from only one class. i.e. one subclass is inherited by one base class only.
+
+*Syntax*
+```c++:
+class subclass_name : access_mode base_class {
+    //body of subclass
+};
+
+OR 
+
+class A{
+    .......
+};
+
+class B: public A{
+    .......
+};
+```
+
+### Multiple Inheritance
+In multiple inhertitance a class can inherit from more than one class. i.e one subclass is inherited from more than one base class.
+
+*Syntax:*
+```java:
+class subclass_name : access_mode base_class1, access_mode base_class2, ....
+{
+  // body of subclass
+};
+
+OR
+
+class B{ 
+... .. ... 
+};
+
+class C{
+... .. ...
+};
+
+class A: public B, public C{
+... ... ...
+};
+```
+
+### Multilevel Inheritance
+In this type of inheritance, a derived class is created from another derived class.
+
+*Syntax:*
+```java:
+class C{ 
+... .. ... 
+};
+
+class B:public C{
+... .. ...
+};
+
+class A: public B{
+... ... ...
+};
+```
+
+### Hierarchical Inheritance
+In this type of inheritance, more than one subclass is inherited from a single base class. i.e. more than one derived class is created from a single base class.
+
+*Syntax:*
+```c++:
+class A  {  
+    // body of the class A.  
+}    
+class B : public A   {  
+    // body of class B.  
+}  
+class C : public A  {  
+    // body of class C.  
+}   
+class D : public A  {  
+    // body of class D.  
+}   
+```
+
+### Hybrid (Virtual) Inheritance
+Hybrid Inheritance is implemented by combining more than one type of inheritance. For example: Combining Hierarchical inheritance and Multiple Inheritance. 
+
 
 ## Encapsulation
 Encapsulation is a process of wrapping code and data together into a single unit, for example, a capsule which is mixed of several medicines.
 
-a real life example of encapsulation, in a company there are different sections like the accounts section, finance section, sales section etc. The finance section handles all the financial transactions and keep records of all the data related to finance. 
+A real life example of encapsulation, in a company there are different sections like the accounts section, finance section, sales section etc. The finance section handles all the financial transactions and keep records of all the data related to finance. 
 
 Similarly the sales section handles all the sales related activities and keep records of all the sales. Now there may arise a situation when for some reason an official from finance section needs all the data about sales in a particular month. In this case, he is not allowed to directly access the data of sales section. 
 
